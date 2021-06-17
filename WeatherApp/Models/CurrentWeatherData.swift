@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct CurrentWeather: Codable {
+struct CurrentWeatherData: Codable {
     let name: String
     let main: Main
     let weather: [Weather]
-
+    
 }
 
 struct Main: Codable {
@@ -20,7 +20,7 @@ struct Main: Codable {
     let pressure: Int
     let humidity: Int
     
-// изменить название key
+    // изменить название key
     enum CodingKeys: String, CodingKey {
         case temp
         case feelsLike = "feels_like"
